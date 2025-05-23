@@ -1,0 +1,232 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Headers */
+h1, h2, h3 {
+    color: #333;
+    margin-bottom: 0.7em;
+}
+h1 { font-size: 2.2em; }
+h2 { font-size: 1.8em; }
+h3 { font-size: 1.4em; }
+
+/* Links */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+.button, button, input[type="submit"] {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1em;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.button:hover, button:hover, input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.button-link { /* For <a> tags styled as buttons */
+    display: inline-block;
+    background-color: #6c757d;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.button-link:hover {
+    background-color: #545b62;
+    text-decoration: none;
+}
+
+.button-link-small {
+    padding: 5px 8px;
+    font-size: 0.9em;
+    margin-right: 5px;
+}
+.button-link-small.cancel {
+    background-color: #dc3545;
+}
+.button-link-small.cancel:hover {
+    background-color: #c82333;
+}
+
+
+/* Navigation */
+.dashboard-nav ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+.dashboard-nav ul li {
+    margin-bottom: 10px;
+}
+.dashboard-nav ul li a.button { /* Specific to dashboard nav buttons */
+    display: block; /* Make buttons take full width of li */
+    text-align: center;
+}
+.logout-button {
+    background-color: #dc3545 !important; /* Important to override general button style if needed */
+}
+.logout-button:hover {
+    background-color: #c82333 !important;
+}
+
+
+/* Forms */
+form div {
+    margin-bottom: 15px;
+}
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+form input[type="text"],
+form input[type="password"],
+form input[type="email"],
+form input[type="datetime-local"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Important to include padding and border in the element's total width and height */
+}
+form textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+table th {
+    background-color: #007bff;
+    color: #fff;
+}
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Messages */
+.errors {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+.errors p {
+    margin: 0;
+    padding: 0;
+}
+.success-message, .message.success-message { /* .message.success-message for dashboard */
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+.success-message p, .message.success-message p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    color: #666;
+}
+
+/* Specific page elements */
+.action-buttons {
+    margin-top: 20px;
+    text-align: center;
+}
+.action-buttons .button {
+    margin: 0 10px;
+}
+
+.appointment-info, .patient-info, .medical-records, .prescription-info {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+}
+.prescription-text {
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    white-space: pre-wrap; /* To respect newlines and spacing */
+}
+.section { /* Generic section helper */
+    margin-bottom: 20px;
+}
+
+header {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+header h2, header p {
+    margin-bottom: 5px; /* Adjust spacing in header */
+}
+header p a.button-link { /* For links in header like "Back to Dashboard" */
+    float: right;
+    position: relative;
+    top: -30px; /* Adjust as needed based on header content */
+}
+
+/* Clearfix for floated elements if any */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
